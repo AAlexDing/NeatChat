@@ -154,6 +154,7 @@ export class GeminiProApi implements LLMApi {
       contents: messages,
       ...(tools ? { tools } : {}),
       generationConfig: {
+        responseModalities: ['Text', 'Image'], 
         temperature: modelConfig.temperature,
         maxOutputTokens: modelConfig.max_tokens,
         topP: modelConfig.top_p,
