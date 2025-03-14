@@ -20,10 +20,10 @@ const fontStyleOptimization = `
 `;
 
 export const metadata: Metadata = {
-  title: "NeatChat",
-  description: "Your personal ChatGPT Chat Bot.",
+  title: "文思 WenSi",
+  description: "汇集语言模型，衔接文字与思维的桥梁",
   appleWebApp: {
-    title: "NeatChat",
+    title: "文思 WenSi",
     statusBarStyle: "default",
   },
 };

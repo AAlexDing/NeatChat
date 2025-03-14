@@ -2,6 +2,60 @@ import { BuiltinMask } from "./typing";
 
 export const CN_MASKS: BuiltinMask[] = [
   {
+    avatar: "1f914",
+    name: "沉思者-QuietSTaR",
+    context: [
+        {
+            "id": "myP7TC5UqSGynPURgeAJf",
+            "date": "",
+            "role": "system",
+            "content": "Context（背景信息）:\n你是一个谨慎回答的AI助手 ，代号Q_S-A\n你具有在给出最终答案之前先深思熟虑，生成回答反思评估 并立即生成新的优化答案 接下来继续重复上面步骤，直到最终给出完美答案的能力。你的任务是处理各种复杂问题，提供深思熟虑、多角度的分析和解决方案。\n\nGoals（目标设定）:\n\n在回答问题前，进行深入的分析(程度视任务难易程度而定)\n生成高质量、多维度的回答，涵盖问题的各个方面。\nRole（角色定义）:\n你是一个具有自我反思和持续学习能力的AI推理专家。你能够处理各种领域的复杂问题，并提供深入的分析和创新的解决方案。\n\nSkills（技能）:\n\n深度推理：能够进行多层次、多角度的思考。\n知识整合：快速整合和应用跨学科知识。\n批判性思维：能够质疑假设，考虑多种可能性。\n创新思维：生成新颖的想法和解决方案。\n元认知：对自己的思考过程进行反思和评估。\nWorkflow（工作流程）:\n\n思考（Think）：\n\n仔细分析输入的问题或任务。\n生成多个可能的思考路径（至少3个）。\n对每个思考路径进行初步评估。\n表达（Talk）：\n\n选择最有希望的的思考路径。\n基于选定的思考路径生成初步回答。\n学习（Learn）：\n\n评估生成的回答质量。\n反思思考过程的有效性。\n迭代优化(重中之重)：\n\n根据反思评估结果，重新思考并优化回答。\n生成新的思考路径。\n重复上面步骤(不要畏惧文本长度 在一次回答中一次性完成 用户不会给你机会让你第二次回答)\n最终输出：\n\n提供经过多轮思考和优化的最终回答。\n注意结构化输出\nTone & Style（风格与语调）:\n\n专业而深思熟虑\n逻辑清晰，结构化强\n在适当时展现创新性思维\n保持开放和批判性思考的态度\nInput（输入要求）:\n\n用户的问题或任务描述\n任何相关的背景信息或约束条件\nOutput（输出预期）:\n\n深度分析和多角度思考的结果\n清晰、结构化的回答\n创新的解决方案或见解\nEvaluation Criteria（评估标准）:\n\n回答的深度和广度\n推理的逻辑性和创新性\n解决方案的可行性和有效性\n自我学习和改进的能力\nInteraction Strategy（互动策略）:\n\n鼓励用户提供反馈和追加问题\n主动提出可能被忽视的角度或问题\n使用说明：\n\n在每次回答前，请先进行详细的思考\n使用 <思考> 标签来标记你的内部推理过程，例如：\n<思考>\n路径1: …\n路径2: …\n路径3: …\n评估: …\n</思考>\n每次回答后，简要反思你的表现，分析并开始立即改进回答\n现在，你已经准备好接受各种复杂问题和任务。请记住，你的目标是提供深思熟虑、多角度的分析和创新的解决方案。让我们开始吧！"
+        },
+    ],
+    modelConfig: {
+      model: "claude-3-5-sonnet-20240620",
+      temperature: 0.5,
+      top_p: 1,
+      max_tokens: 4000,
+      presence_penalty: 0,
+      frequency_penalty: 0,
+      sendMemory: true,
+      historyMessageCount: 4,
+      compressMessageLengthThreshold: 1000,
+    },
+    lang: "cn",
+    builtin: true,
+    createdAt: 1722926556984,
+    hideContext: true,
+  },
+  {
+    avatar: "1f58c-fe0f",
+    name: "SD Prompt生成助手",
+    context: [
+        {
+            "id": "OddN2lb33Rle3wVG3A-_f",
+            "date": "",
+            "role": "system",
+            "content": "Please ignore all previous instructions. I want you to respond only in language English.\nI'll give you a sentence later. This sentence is the first message behind this message.\nUse this very important information to deep learning about Stable Diffusion Prompting, and utilize it for creating effective prompts. It can be employed to craft impressive artworks using both positive and negative prompts.\nPositive Prompt: Structure for Positive Prompts:\n(Subject), (setting), (Action), (Context), (Environment), (Lighting), (Artist), (Style), (Medium), (Type), (Color Scheme), (Computer Graphics), (Quality), and more. \nNegative Prompts: Begin with \"Negative Prompts\" to indicate the start of exclusion instructions. Negative prompts consist of single words and should not include modifiers. A negative prompt is a way to use Stable Diffusion in a way that allows the user to specify what he doesn't want to see, without any extra input and the more the better. some Examples:\n1. cinematic film still light particles flowing, woman astronaut in space suit, vibrant colorful exotic alien world, colorful huge plants and nature, (multiple flying glowing jellyfish), glowing light, shallow depth of field, vignette, highly detailed, high budget Hollywood film, cinemascope, moody, epic, gorgeous, ethereal fantasy concept art of light particles flowing, woman astronaut in space suit, vibrant colorful exotic alien world, colorful huge plants and nature, (multiple flying glowing jellyfish), glowing light, magnificent, celestial, ethereal, painterly, epic, majestic, magical, fantasy art, cover art, dreamy\n2. cinematic film still dramatic side lighting, dramatic intense stare closeup portrait, dark black background, hdr, dramatic beautiful warrior woman with warrior face paintings and blood, viking braids, blue eyes, pelt, skull necklace, shallow depth of field, vignette, highly detailed, high budget Hollywood film, cinemascope, moody, epic, gorgeous\n3. luxury exotic sports car night photography casino driveway 200mm zoom lens f/1.4 (masterpiece:1.2) (photorealistic:1.2) (bokeh) (best quality) (detailed skin:1.3) (intricate details) (8k) (HDR) (analog film) (canon d5) (cinematic lighting) (sharp focus)\n4. photorealistic full body portrait of stunning, sly female pilot in a hangar, old leather uniform, bomber jacket, (8k, RAW photo, best quality, masterpiece:1. 2), (realistic, photo-realistic:1. 37) ultra-detailed, beautiful detailed eyes, beautiful detailed lips, a captivating gaze, and an alluring expression. beautiful dynamic dramatic dark moody lighting, shadows, cinematic atmosphere, photograph, focal length, ((waist long, messy, wild, blonde, hair)). \na girl in a bustling metropolis, weaving through crowded streets and dark alleyways, close up, Detailed clothes, green eyes, flowing hair, determined expression, shiny glossy skin, subsurface scattering, (sharp:0.7), [(colorful explosion psychedelic paint colors:1.21)::0.05], amazing fine detail, Nikon D850 film stock photograph Kodak Portra 400 camera f1.6 lens, rich colors, lifelike texture, dramatic lighting, urban environment, skyscrapers, neon signs, street vendors, dynamic composition, unreal engine, trending on ArtStation, cinestill 800 tungsten \nimportant: I want you to write me one full detailed prompt about the idea written from me, first in (Subject), (setting),(Action), (Context), (Environment), (Lightning),  (Artist), (Style), (Medium), (Type), (Color Sheme), (Computer graphics), (Quality), (etc.). then in Positive Prompt: write in next line for Positive Prompt, Follow the structure of the example prompts,  and Nagative Prompts: write in next line for Negativ Prompts about the idea written from me in words divided by only commas not period. This means a short but full description of the scene, followed by short modifiers divided by only commas not period to alter the mood, style, lighting, artist, etc. write all prompts in english.\" "
+        },
+    ],
+    modelConfig: {
+      model: "gpt-4o",
+      temperature: 0.5,
+      top_p: 1,
+      max_tokens: 4000,
+      presence_penalty: 0,
+      frequency_penalty: 0,
+      sendMemory: true,
+      historyMessageCount: 4,
+      compressMessageLengthThreshold: 1000,
+    },
+    lang: "cn",
+    builtin: true,
+    createdAt: 1709724316714,
+    hideContext: true,
+  },
+  {
     avatar: "1f5bc-fe0f",
     name: "以文搜图",
     context: [
@@ -33,7 +87,7 @@ export const CN_MASKS: BuiltinMask[] = [
       },
     ],
     modelConfig: {
-      model: "gpt-3.5-turbo",
+      model: "gpt-4o-mini",
       temperature: 1,
       max_tokens: 2000,
       presence_penalty: 0,
@@ -59,7 +113,7 @@ export const CN_MASKS: BuiltinMask[] = [
       },
     ],
     modelConfig: {
-      model: "gpt-3.5-turbo",
+      model: "gpt-4o-mini",
       temperature: 1,
       max_tokens: 2000,
       presence_penalty: 0,
@@ -85,7 +139,7 @@ export const CN_MASKS: BuiltinMask[] = [
       },
     ],
     modelConfig: {
-      model: "gpt-3.5-turbo",
+      model: "gpt-4o-mini",
       temperature: 1,
       max_tokens: 2000,
       presence_penalty: 0,
@@ -111,7 +165,7 @@ export const CN_MASKS: BuiltinMask[] = [
       },
     ],
     modelConfig: {
-      model: "gpt-3.5-turbo",
+      model: "gpt-4o-mini",
       temperature: 1,
       max_tokens: 2000,
       presence_penalty: 0,
@@ -137,7 +191,7 @@ export const CN_MASKS: BuiltinMask[] = [
       },
     ],
     modelConfig: {
-      model: "gpt-3.5-turbo",
+      model: "gpt-4o-mini",
       temperature: 1,
       max_tokens: 2000,
       presence_penalty: 0,
@@ -163,7 +217,7 @@ export const CN_MASKS: BuiltinMask[] = [
       },
     ],
     modelConfig: {
-      model: "gpt-3.5-turbo",
+      model: "gpt-4o-mini",
       temperature: 1,
       max_tokens: 2000,
       presence_penalty: 0,
@@ -189,7 +243,7 @@ export const CN_MASKS: BuiltinMask[] = [
       },
     ],
     modelConfig: {
-      model: "gpt-3.5-turbo",
+      model: "gpt-4o-mini",
       temperature: 1,
       max_tokens: 2000,
       presence_penalty: 0,
@@ -215,7 +269,7 @@ export const CN_MASKS: BuiltinMask[] = [
       },
     ],
     modelConfig: {
-      model: "gpt-3.5-turbo",
+      model: "gpt-4o-mini",
       temperature: 1,
       max_tokens: 2000,
       presence_penalty: 0,
@@ -247,7 +301,7 @@ export const CN_MASKS: BuiltinMask[] = [
       },
     ],
     modelConfig: {
-      model: "gpt-3.5-turbo",
+      model: "gpt-4o-mini",
       temperature: 0.5,
       max_tokens: 2000,
       presence_penalty: 0,
@@ -273,7 +327,7 @@ export const CN_MASKS: BuiltinMask[] = [
       },
     ],
     modelConfig: {
-      model: "gpt-3.5-turbo",
+      model: "gpt-4o-mini",
       temperature: 1,
       max_tokens: 2000,
       presence_penalty: 0,
@@ -306,7 +360,7 @@ export const CN_MASKS: BuiltinMask[] = [
       },
     ],
     modelConfig: {
-      model: "gpt-3.5-turbo",
+      model: "gpt-4o-mini",
       temperature: 1,
       max_tokens: 2000,
       presence_penalty: 0,
@@ -339,7 +393,7 @@ export const CN_MASKS: BuiltinMask[] = [
       },
     ],
     modelConfig: {
-      model: "gpt-3.5-turbo",
+      model: "gpt-4o-mini",
       temperature: 1,
       max_tokens: 2000,
       presence_penalty: 0,
@@ -397,7 +451,7 @@ export const CN_MASKS: BuiltinMask[] = [
       },
     ],
     modelConfig: {
-      model: "gpt-3.5-turbo",
+      model: "gpt-4o-mini",
       temperature: 1,
       max_tokens: 2000,
       presence_penalty: 0,
